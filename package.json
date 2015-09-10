@@ -5,7 +5,7 @@
   "main": "index.js",
   "lisence": "MIT",
   "scripts": {
-    "app": "electron index.js"
+    "app": "electron ./src/index.js"
   },
   "author": "Hiroshi Yoshida",
   "license": "MIT",
