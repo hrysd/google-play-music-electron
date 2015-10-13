@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const packager = require('electron-packager'),
+          path = require('path');
+
+let root    = path.resolve(process.argv[1], '../..'),
+    srcDir  = path.join(root, 'src'),
+    distDir = path.join(root, 'dist');
+
+let packageOptions = {
+      dir: root,
+      name: 'Google Play Music',
+      // XXX: Support other platform
+      platform: 'darwin',
+      arch: 'x64',
+      version: '0.32.1',
+      out: distDir,
+      overwrite: true,
+      icon: path.join(root, 'resources', 'icon.icns'),
+      ignore: [
+        'README.md',
+        'bin',
+        'dist',
+        'node_modules',
+        'screenshots',
+      ]
+    };
+
+packager(packageOptions, (err, appPath) => {
+  console.log(appPath);
+});

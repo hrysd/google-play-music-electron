@@ -2,10 +2,11 @@
   "name": "google-play-music-electron",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "./src/index.js",
   "lisence": "MIT",
   "scripts": {
-    "app": "electron ./src/index.js"
+    "app": "electron ./src/index.js",
+    "build": "./bin/build"
   },
   "author": "Hiroshi Yoshida",
   "license": "MIT",
@@ -13,6 +14,7 @@
     "menubar": "^2.2.1"
   },
   "devDependencies": {
+    "electron-packager": "^5.1.0",
     "electron-prebuilt": "^0.32.1"
   }
 }
