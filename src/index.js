@@ -2,4 +2,12 @@
 
 const App           = require('app'),
       BrowserWindow = require('browser-window'),
-      Menubar       = require('menubar')({dir: __dirname, width: 980, height: 850});
+      Menubar       = require('menubar'),
+      path          = require('path');
+
+Menubar({
+  dir: __dirname,
+  icon: path.join(__dirname, 'images', 'menubar_icon.png'),
+  width: 980,
+  height: 850
+});
